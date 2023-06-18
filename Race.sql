@@ -1,8 +1,9 @@
-/*drop table raceResult;
+drop table raceResult;
 drop table raceHorse;
 drop table horse;
 drop table jockey;
-drop table race;*/
+drop table race;
+drop table trainer;
 create table keiba.race(
     id int auto_increment primary key,
     stadium text,
@@ -30,6 +31,7 @@ create table keiba.raceHorse(
     raceId int,
     horseId int,
     jockeyId int ,
+    trainerId int,
     frameNumber int,
     weight int,
     old int,
