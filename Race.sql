@@ -4,7 +4,7 @@ drop table horse;
 drop table jockey;
 drop table race;
 drop table trainer;
-create table keiba.race(
+create table race(
     id int auto_increment primary key,
     stadium text,
     round int,
@@ -18,16 +18,16 @@ create table keiba.race(
     oldLimit int, /*0:4歳以上,1:3歳以上,2:3歳,3:2歳 */
     raceDate date
 );
-create table keiba.horse(
+create table horse(
     id int auto_increment primary key,
     name text,
     gender int /*0:牝,1:牡*/
 );
-create table keiba.jockey(
+create table jockey(
     id int auto_increment primary key,
     name char(255)
 );
-create table keiba.raceHorse(
+create table raceHorse(
     raceId int,
     horseId int,
     jockeyId int ,
@@ -40,7 +40,7 @@ create table keiba.raceHorse(
         raceId,horseId,jockeyId
     )
 );
-create table keiba.raceResult(
+create table raceResult(
     raceId int,
     frameNumber int,
     fullTime int,
@@ -53,8 +53,10 @@ create table keiba.raceResult(
     )
 );
 
-create table keiba.trainer(
+create table trainer(
     id int auto_increment primary key,
     name char(255)
-)
-ALTER TABLE keiba.race ADD INDEX raceLength_index(raceLength);
+);
+
+ALTER TABLE race ADD INDEX raceLength_index(raceLength);
+ALTER TABLE race ADD INDEX raceDate_index(raceDate);
