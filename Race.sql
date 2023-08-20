@@ -61,4 +61,4 @@ create table trainer(
 ALTER TABLE race ADD INDEX raceLength_index(raceLength);
 ALTER TABLE race ADD INDEX raceDate_index(raceDate);
 
-CREATE VIEW horseCount as  select race.id,count(*) from race join raceHorse on race.id=raceHorse.raceId group by race.id;
+CREATE VIEW horseCount as select race.id as raceId,count(*) as horseCount from race join raceHorse on race.id=raceHorse.raceId group by race.id;
