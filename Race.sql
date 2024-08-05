@@ -16,7 +16,8 @@ create table race(
     raceWeather int, /*0:晴,1:曇,2:雨*/
     grade int, /*0:G1,1:G2,2:G3,3:リステッド,4:オープン,5:3勝クラス,6:2勝クラス,7:1勝クラス,8:新馬,9:未勝利*/
     oldLimit int, /*0:4歳以上,1:3歳以上,2:3歳,3:2歳 */
-    raceDate date
+    raceDate date,
+    stadiumDay int,
 );
 create table horse(
     id int auto_increment primary key,
