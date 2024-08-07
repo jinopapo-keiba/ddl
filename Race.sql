@@ -49,6 +49,7 @@ create table raceResult(
     ranking int, 
     lastRapTime int,
     popular int,
+    odds float,
     primary key (
         raceId,frameNumber
     )
