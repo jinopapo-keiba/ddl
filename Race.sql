@@ -55,6 +55,17 @@ create table raceResult(
     )
 );
 
+create table payout(
+    payoutId int auto_increment ,
+    raceId int,
+    horseNumber text,
+    betType int,
+    payout float,
+        primary key (
+        payoutId,raceId
+    )
+);
+
 create table trainer(
     id int auto_increment primary key,
     name char(255)
