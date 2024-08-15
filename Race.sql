@@ -58,7 +58,7 @@ create table raceResult(
 create table payout(
     payoutId int auto_increment ,
     raceId int,
-    horseNumber text,
+    frameNumber text,
     betType int,
     payout float,
         primary key (
