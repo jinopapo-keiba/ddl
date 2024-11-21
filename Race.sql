@@ -18,6 +18,7 @@ create table race(
     oldLimit int, /*0:4歳以上,1:3歳以上,2:3歳,3:2歳 */
     raceDate date,
     stadiumDay int,
+    stadiumRound int,
 );
 create table horse(
     id int auto_increment primary key,
